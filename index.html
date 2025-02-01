@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Macclesfield Taxis provides reliable taxi services, airport transfers, railway station pickups, and local cab bookings. Offering affordable and prompt transportation in Macclesfield, and surrounding areas. Book now for stress-free travel!">
+    <meta name="keywords" content="Macclesfield taxis, taxis, taxi service, cab service, airport taxis, airport cabs,  cabs, Macclesfield  cabs, taxi near me, cabs near me, local taxi near me, airport transfers, local taxi, railway station taxis, railway station cabs, train station taxis, train station cabs, booking com taxi, taxi number,Macclesfield  taxi service, ride services, transportation services, airport transportation, railway station transportation, reliable taxis, executive taxis, long-distance taxis">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Drive Booking - Book Your Drive Online">
+    <meta property="og:site_name" content="Macclesfield Taxis">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Macclesfield Taxis offers reliable taxi services, local cabs, airport transfers, and more in Macclesfield . Contact us for prompt transportation!">
+    <meta property="og:url" content="https://www.Macclesfieldtaxis.com/">
+    <meta name="author" content="Macclesfield Taxis">
+    <title>Macclesfield Taxis</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="logo.ico" type="image/x-icon">
+    <script src="https://use.fontawesome.com/3408b2930e.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            min-height: 100vh;
+            overflow-y: scroll;
+            position: relative;
+            scrollbar-width: none;
+            opacity: 0.9;
+        }
+
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Background Video */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.7;
+        }
+
+        .container {
+            background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 24px rgba(0, 255, 255, 0.3);
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            margin-top: 5%;
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #00ffcc;
+            text-align: center;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            animation: neonGlow 2s infinite alternate, neonFlicker 1.5s infinite;
+        }
+
+        /* Neon Glow Animation */
+        @keyframes neonGlow {
+            0% {
+                text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 40px #00ffcc, 0 0 80px #00ffcc;
+            }
+            100% {
+                text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 40px #00ffcc, 0 0 80px #00ffcc, 0 0 120px #00ffcc;
+            }
+        }
+
+        /* Neon Flicker Animation */
+        @keyframes neonFlicker {
+            0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+                opacity: 1;
+            }
+            20%, 24%, 55% {
+                opacity: 0.5;
+            }
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #bbbbbb;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .heading {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+            color: #ccbe56;
+            text-transform: uppercase;
+            text-align: center;
+            text-shadow: 0 0 10px #ccbe56, 0 0 20px #ccbe56;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="time"] {
+            background-color: #333333;
+            border: 1px solid #00ffcc;
+            border-radius: 8px;
+            color: #f5f5f5;
+            padding: 12px;
+            margin-bottom: 15px;
+            width: 100%;
+            font-size: 1rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        input:focus {
+            border-color: #ccbe56;
+            box-shadow: 0 0 10px #ccbe56, 0 0 20px #ccbe56;
+        }
+
+        input::placeholder {
+            color: #aaaaaa;
+        }
+
+        button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .b1 {
+            background-color: #00ffcc;
+            color: #000;
+        }
+
+        .b1:hover {
+            background-color: #00e6b8;
+            transform: scale(1.05);
+        }
+
+        .b2 {
+            background-color: #ccbe56;
+            color: #000;
+        }
+
+        .b2:hover {
+            background-color: #fd0707a1;
+            transform: scale(1.05);
+        }
+
+        .copy_btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .copy_btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        button[onclick] {
+            background-color: #ffc107;
+            color: #333;
+            margin-top: 15px;
+        }
+
+        button[onclick]:hover {
+            background-color: #e0a800;
+            transform: scale(1.05);
+        }
+
+        .heading-div {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* Stylish Error Popup */
+        .error-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ff4444;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+            z-index: 1000;
+            text-align: center;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Tablet and below */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.1rem;
+            }
+
+            input {
+                font-size: 0.9rem;
+            }
+
+            button {
+                font-size: 0.9rem;
+            }
+
+            .container {
+                padding: 20px;
+            }
+        }
+
+        /* Small devices */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1rem;
+            }
+
+            input {
+                font-size: 0.8rem;
+                padding: 10px;
+            }
+
+            button {
+                font-size: 0.8rem;
+            }
+
+            .container {
+                padding: 15px;
+                width: 100%;
+                height: 100vh;
+                margin: 0;
+                border-radius: 0;
+            }
+
+            .copy_btn {
+                padding: 6px 10px;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Background Video -->
+    <video class="video-background" autoplay muted loop>
+        <source src="853826-hd_1920_1080_25fps.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="container">
+        <h1>Macclesfield Taxis</h1>
+        <div class="heading-div">
+            <h2>Call for Instant Booking:</h2>
+            <h2 class="number-h2">0044 7423587661 
+                <button class="copy_btn" onclick="copyText()">Copy</button>
+            </h2>
+            <div class="heading">Reliable Taxi & Cab Service in Macclesfield </div>
+        </div>
+
+        <form id="bookingForm" action="http://localhost:3000/" method="POST">
+            <input type="text" name="fullName" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Valid Email" required>
+            <input type="number" name="passengers" placeholder="Number of Passengers" required>
+            <input type="text" name="from" placeholder="From" required>
+            <input type="text" name="destination" placeholder="Destination" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <input type="date" name="date" required>
+            <input type="time" name="time" required>
+            <button class="b1" type="submit">Book the Ride</button>
+            <button class="b2" type="reset">Reset</button>
+        </form>
+
+        <button onclick="window.location.href='driver-login.html'">Are you a Driver?</button>
+    </div>
+
+    <!-- Error Popup -->
+    <div id="errorPopup" class="error-popup">
+        <p>Please fill in all the required fields!</p>
+        <button onclick="closeErrorPopup()">OK</button>
+    </div>
+
+    <script>
+        // Function to copy text
+        function copyText() {
+            const text = "0044 7423587661";
+            navigator.clipboard.writeText(text).then(function () {
+                alert("Copied: " + text);
+            }, function (err) {
+                console.error("Failed to copy text: ", err);
+            });
+        }
+
+        // Form validation
+        document.getElementById('bookingForm').addEventListener('submit', function (event) {
+            const inputs = this.querySelectorAll('input[required]');
+            let isValid = true;
+
+            inputs.forEach(input => {
+                if (!input.value.trim()) {
+                    isValid = false;
+                    input.style.borderColor = '#ff4444'; // Highlight empty fields
+                } else {
+                    input.style.borderColor = '#00ffcc'; // Reset border color
+                }
+            });
+
+            if (!isValid) {
+                event.preventDefault(); // Prevent form submission
+                document.getElementById('errorPopup').style.display = 'block'; // Show error popup
+            }
+        });
+
+        // Close error popup
+        function closeErrorPopup() {
+            document.getElementById('errorPopup').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
