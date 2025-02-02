@@ -59,10 +59,9 @@
             border-radius: 20px;
             padding: 30px;
             box-shadow: 0 8px 24px rgba(0, 255, 255, 0.3);
-            width: 100%;
+            width: 90%;
             max-width: 600px;
-            margin: 0 auto;
-            margin-top: 5%;
+            margin: 5% auto;
             position: relative;
             z-index: 2;
         }
@@ -231,7 +230,24 @@
             }
         }
 
-        /* Tablet and below */
+        /* Copy Popup */
+        .copy-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #00ffcc;
+            color: #000;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+            z-index: 1000;
+            text-align: center;
+            animation: fadeIn 0.5s;
+        }
+
+        /* Responsive Adjustments */
         @media (max-width: 768px) {
             h1 {
                 font-size: 2rem;
@@ -241,44 +257,54 @@
                 font-size: 1.1rem;
             }
 
+            .heading {
+                font-size: 1rem;
+            }
+
             input {
                 font-size: 0.9rem;
+                padding: 10px;
             }
 
             button {
                 font-size: 0.9rem;
+                padding: 10px 16px;
             }
 
             .container {
                 padding: 20px;
+                margin-top: 10%;
             }
         }
 
-        /* Small devices */
         @media (max-width: 480px) {
             h1 {
                 font-size: 1.8rem;
+                letter-spacing: 2px;
             }
 
             h2 {
                 font-size: 1rem;
             }
 
+            .heading {
+                font-size: 0.9rem;
+            }
+
             input {
                 font-size: 0.8rem;
-                padding: 10px;
+                padding: 8px;
             }
 
             button {
                 font-size: 0.8rem;
+                padding: 8px 12px;
             }
 
             .container {
                 padding: 15px;
-                width: 100%;
-                height: 100vh;
-                margin: 0;
-                border-radius: 0;
+                margin-top: 15%;
+                width: 95%;
             }
 
             .copy_btn {
@@ -290,12 +316,11 @@
 </head>
 
 <body>
-    <!-- Background Video -->
     <video class="video-background" autoplay muted loop>
-        <source src="853826-hd_1920_1080_25fps.mp4" type="video/mp4">
+        <source src="https://www.macclesfieldtaxis.com/videos/855540-hd_1920_1080_30fps.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-
+    
     <div class="container">
         <h1>Macclesfield Taxis</h1>
         <div class="heading-div">
@@ -306,7 +331,7 @@
             <div class="heading">Reliable Taxi & Cab Service in Macclesfield </div>
         </div>
 
-        <form id="bookingForm" action="http://localhost:3000/" method="POST">
+        <form id="bookingForm" action="https://www.macclesfieldtaxis.com/" method="POST">
             <input type="text" name="fullName" placeholder="Full Name" required>
             <input type="email" name="email" placeholder="Valid Email" required>
             <input type="number" name="passengers" placeholder="Number of Passengers" required>
@@ -319,7 +344,7 @@
             <button class="b2" type="reset">Reset</button>
         </form>
 
-        <button onclick="window.location.href='driver-login.html'">Are you a Driver?</button>
+        <button onclick="window.location.href='https://www.macclesfieldtaxis.com/driver-login.html'">Are you a Driver?</button>
     </div>
 
     <!-- Error Popup -->
@@ -328,15 +353,27 @@
         <button onclick="closeErrorPopup()">OK</button>
     </div>
 
+    <div id="copyPopup" class="copy-popup">
+        <p>Copied!</p>
+    </div>
+
     <script>
         // Function to copy text
         function copyText() {
             const text = "0044 7423587661";
             navigator.clipboard.writeText(text).then(function () {
-                alert("Copied: " + text);
+                showCopyPopup();
             }, function (err) {
                 console.error("Failed to copy text: ", err);
             });
+        }
+
+        function showCopyPopup() {
+            const copyPopup = document.getElementById('copyPopup');
+            copyPopup.style.display = 'block';
+            setTimeout(() => {
+                copyPopup.style.display = 'none';
+            }, 1000); 
         }
 
         // Form validation
@@ -347,14 +384,14 @@
             inputs.forEach(input => {
                 if (!input.value.trim()) {
                     isValid = false;
-                    input.style.borderColor = '#ff4444'; // Highlight empty fields
+                    input.style.borderColor = '#ff4444'; 
                 } else {
-                    input.style.borderColor = '#00ffcc'; // Reset border color
+                    input.style.borderColor = '#00ffcc'; 
                 }
             });
 
             if (!isValid) {
-                event.preventDefault(); // Prevent form submission
+                event.preventDefault(); 
                 document.getElementById('errorPopup').style.display = 'block'; // Show error popup
             }
         });
