@@ -76,7 +76,7 @@ const getCustomerBookingEmail = (booking) => `
         </tr>
         <tr>
           <td style="border: 1px solid #ddd; padding: 8px;">Pickup Location</td>
-          <td style="border: 1px solid #ddd; padding: 8px;">${booking.pickup_location}</td>
+          <td style="border: 1px solid #ddd; padding: 8px;">${booking.from_location}</td>
         </tr>
         <tr>
           <td style="border: 1px solid #ddd; padding: 8px;">Destination</td>
@@ -112,7 +112,7 @@ const getDriverNotificationEmail = (booking) => `
         </tr>
         <tr>
           <td style="border: 1px solid #ddd; padding: 8px;">Pickup Location</td>
-          <td style="border: 1px solid #ddd; padding: 8px;">${booking.pickup_location}</td>
+          <td style="border: 1px solid #ddd; padding: 8px;">${booking.from_location}</td>
         </tr>
         <tr>
           <td style="border: 1px solid #ddd; padding: 8px;">Destination</td>
