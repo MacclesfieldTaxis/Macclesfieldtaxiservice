@@ -186,19 +186,19 @@ app.get("/", function(req, res) {
 // API Routes
 // Create new booking
 app.post("/", async (req, res) => {
-  const { fullName, email, phone, date, time, passengers, from, destination } = req.body;
+  const { fullName, email1, phone1, date1, time1, passengers, from, destination1 } = req.body;
 
   try {
     // Prepare the booking data object
     const bookingData = {
       full_name: fullName,
-      email,
-      phone,
+      email: email1,
+      phone: phone1,
       passengers: parseInt(passengers, 10),
       from_location: from,
-      destination,
-      date,
-      time,
+      destination: destination1,
+      date:date1,
+      time:time1,
       status: 'pending',
       created_at: new Date().toISOString(),
     };
