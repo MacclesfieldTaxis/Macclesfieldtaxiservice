@@ -119,10 +119,10 @@ const getDriverNotificationEmail = (booking) => `
           <td style="border: 1px solid #ddd; padding: 8px;">${booking.destination}</td>
         </tr>
       </table>
-      <p>Please log in to your dashboard to accept or reject this booking.</p>
+      <p>Please log in to your dashboard to accept or reject this booking. <a href="https://www.macclesfieldtaxis.com/driver.html" target="_blank">Click here</a>.</p>
     </body>
-  </html>
-`;
+</html>
+;
 
 const getBookingAcceptedEmail = (booking, driver) => `
   <html>
