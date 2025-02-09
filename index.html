@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB" dir="ltr">
 
 <head>
+    <!-- Enhanced SEO Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Macclesfield Taxis provides reliable taxi services, airport transfers, railway station pickups, and local cab bookings. Offering affordable and prompt transportation in Macclesfield, and surrounding areas. Book now for stress-free travel!">
+    <meta name="description" content="Macclesfield Taxis, Reliable taxi services, airport transfers, train station, train station pickups,Macclesfield Railway Station, Sunderland Street, Macclesfield, SK11 6JP,  ,24/7 Macclesfield Taxi Service. Immediate pickups at Macclesfield Train Station, reliable airport transfers to Manchester Airport, Book online or call 0044 7423 587661, local cab bookings, Offering affordable and prompt transportation in Macclesfield, and surrounding areas. Book now for stress-free travel!">
     <meta name="keywords" content="Macclesfield taxis, taxis, taxi service, cab service, airport taxis, airport cabs,  cabs, Macclesfield  cabs, taxi near me, cabs near me, local taxi near me, airport transfers, local taxi, railway station taxis, railway station cabs, train station taxis, train station cabs, booking com taxi, taxi number,Macclesfield  taxi service, ride services, transportation services, airport transportation, railway station transportation, reliable taxis, executive taxis, long-distance taxis">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="Drive Booking - Book Your Drive Online">
@@ -12,37 +13,87 @@
     <meta property="og:locale" content="en_GB">
     <meta property="og:type" content="website">
     <meta property="og:description" content="Macclesfield Taxis offers reliable taxi services, local cabs, airport transfers, and more in Macclesfield . Contact us for prompt transportation!">
-    <meta property="og:url" content="https://www.Macclesfieldtaxis.com/">
+    <meta property="og:url" content="https://www.macclesfieldtaxis.com/">
     <meta name="author" content="Macclesfield Taxis">
-    <title>Macclesfield Taxis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <title>Macclesfield Taxis | 24/7 Train Station Transfers & Airport Taxi Service</title>
+    <meta name="description" content="24/7 Macclesfield Taxi Service. Immediate pickups at Macclesfield Train Station, reliable airport transfers to Manchester Airport, and local cab services. Book online or call 0044 7423 587661">
     
+    <!-- Preconnect and Preload -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" as="style">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TaxiService",
+        "name": "Macclesfield Taxis",
+        "image": "https://www.macclesfieldtaxis.com/logo.ico",
+        "@id": "https://www.macclesfieldtaxis.com/",
+        "url": "https://www.macclesfieldtaxis.com/",
+        "telephone": "+447423587661",
+        "priceRange": "££-£££",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Macclesfield Taxi",
+            "addressLocality": "Macclesfield",
+            "postalCode": "SK11 6JP",
+            "addressCountry": "GB"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 53.259331,
+            "longitude": -2.1221737
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "10:00",
+            "closes": "00:00"            
+        },
+        "areaServed": {
+            "@type": "City",
+            "name": "Macclesfield"
+        }
+    }
+    </script>
+
+    <!-- Styles -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="icon" href="logo.ico" type="image/x-icon">
-    <script src="https://use.fontawesome.com/3408b2930e.js"></script>
-
     <style>
+        /* Base Styles */
+        :root {
+            --primary: #00ffcc;
+            --secondary: #ffc107;
+            --error: #ff4444;
+            --dark: #0a0a0a;
+            --container-bg: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Roboto', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            background-color: #0a0a0a;
+            background-color: var(--dark);
             color: #e0e0e0;
             min-height: 100vh;
-            overflow-y: scroll;
-            position: relative;
-            scrollbar-width: none;
-            opacity: 0.9;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.5;
         }
 
-        body::-webkit-scrollbar {
-            display: none;
-        }
-
-        /* Background Video */
         .video-background {
             position: fixed;
             top: 0;
@@ -52,18 +103,149 @@
             object-fit: cover;
             z-index: -1;
             opacity: 0.7;
+            pointer-events: none;
         }
 
+        /* Main Container */
         .container {
-            background: linear-gradient(145deg, #1a1a1a, #2a2a2a);
+            background: var(--container-bg);
             border-radius: 20px;
-            padding: 30px;
+            padding: 2rem;
             box-shadow: 0 8px 24px rgba(0, 255, 255, 0.3);
             width: 90%;
             max-width: 600px;
-            margin: 5% auto;
+            margin: 5% auto 100px;
             position: relative;
             z-index: 2;
+        }
+
+        h2 {
+            font-size: clamp(1rem, 4vw, 1.3rem);
+            color: #bbbbbb;
+            text-align: center;
+            margin-bottom: 0.75rem;
+        }
+
+        .heading {
+            font-size: clamp(0.9rem, 3.5vw, 1.1rem);
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        /* Form Elements */
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="time"] {
+            background-color: #333;
+            border: 2px solid var(--primary);
+            border-radius: 8px;
+            color: #f5f5f5;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            width: 100%;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        input:focus {
+            border-color: var(--secondary);
+            box-shadow: 0 0 12px var(--secondary);
+        }
+
+        input::placeholder {
+            color: #aaa;
+            opacity: 1;
+        }
+
+        /* Buttons */
+        button {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+            width: 100%;
+            max-width: 200px;
+            margin: 0.5rem auto;
+        }
+
+        .b1 {
+            background-color: var(--primary);
+            color: #000;
+        }
+
+        .b2 {
+            background-color: var(--secondary);
+            color: #000;
+        }
+
+        .copy_btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .copy_btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        button[onclick] {
+            background-color: #ffc107;
+            color: #333;
+            margin-top: 15px;
+        }
+
+        button[onclick]:hover {
+            background-color: #e0a800;
+            transform: scale(1.05);
+        }
+
+        /* Popups */
+        .error-popup,
+        .copy-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 1.5rem;
+            border-radius: 10px;
+            z-index: 1000;
+            text-align: center;
+            animation: fadeIn 0.3s ease;
+            width: 90%;
+            max-width: 300px;
+        }
+
+        /* Footer */
+        footer {
+            background: transparent;
+            padding: 1rem;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: -10;
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 0.9rem;
         }
 
         h1 {
@@ -97,309 +279,165 @@
             }
         }
 
-        h2 {
-            font-size: 1.3rem;
-            font-weight: 500;
-            color: #bbbbbb;
-            text-align: center;
-            margin-bottom: 10px;
-        }
-
-        .heading {
-            font-size: 1.1rem;
-            font-weight: 500;
-            margin-bottom: 20px;
-            color: #ccbe56;
-            text-transform: uppercase;
-            text-align: center;
-            text-shadow: 0 0 10px #ccbe56, 0 0 20px #ccbe56;
-        }
-
-        input[type="text"],
-        input[type="email"],
-        input[type="number"],
-        input[type="tel"],
-        input[type="date"],
-        input[type="time"] {
-            background-color: #333333;
-            border: 1px solid #00ffcc;
-            border-radius: 8px;
-            color: #f5f5f5;
-            padding: 12px;
-            margin-bottom: 15px;
-            width: 100%;
-            font-size: 1rem;
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        input:focus {
-            border-color: #ccbe56;
-            box-shadow: 0 0 10px #ccbe56, 0 0 20px #ccbe56;
-        }
-
-        input::placeholder {
-            color: #aaaaaa;
-        }
-
-        button {
-            padding: 12px 20px;
-            border: none;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-        .b1 {
-            background-color: #00ffcc;
-            color: #000;
-        }
-
-        .b1:hover {
-            background-color: #00e6b8;
-            transform: scale(1.05);
-        }
-
-        .b2 {
-            background-color: #ccbe56;
-            color: #000;
-        }
-
-        .b2:hover {
-            background-color: #fd0707a1;
-            transform: scale(1.05);
-        }
-
-        .copy_btn {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 8px 12px;
-            border-radius: 5px;
-            font-size: 0.9rem;
-            margin-left: 10px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-        .copy_btn:hover {
-            background-color: #0056b3;
-            transform: scale(1.05);
-        }
-
-        button[onclick] {
-            background-color: #ffc107;
-            color: #333;
-            margin-top: 15px;
-        }
-
-        button[onclick]:hover {
-            background-color: #e0a800;
-            transform: scale(1.05);
-        }
-
-        .heading-div {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        /* Stylish Error Popup */
-        .error-popup {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #ff4444;
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
-            z-index: 1000;
-            text-align: center;
-            animation: fadeIn 0.5s;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        /* Copy Popup */
-        .copy-popup {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #00ffcc;
-            color: #000;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
-            z-index: 1000;
-            text-align: center;
-            animation: fadeIn 0.5s;
-        }
-
-        /* Responsive Adjustments */
+        /* Responsive Breakpoints */
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-
-            h2 {
-                font-size: 1.1rem;
-            }
-
-            .heading {
-                font-size: 1rem;
-            }
-
-            input {
-                font-size: 0.9rem;
-                padding: 10px;
+            .container {
+                padding: 1.5rem;
+                margin: 10% auto 120px;
             }
 
             button {
-                font-size: 0.9rem;
-                padding: 10px 16px;
-            }
-
-            .container {
-                padding: 20px;
-                margin-top: 10%;
+                padding: 0.65rem 1.25rem;
+                font-size: 0.95rem;
             }
         }
 
         @media (max-width: 480px) {
-            h1 {
-                font-size: 1.8rem;
-                letter-spacing: 2px;
-            }
-
-            h2 {
-                font-size: 1rem;
-            }
-
-            .heading {
-                font-size: 0.9rem;
-            }
-
-            input {
-                font-size: 0.8rem;
-                padding: 8px;
-            }
-
-            button {
-                font-size: 0.8rem;
-                padding: 8px 12px;
-            }
-
             .container {
-                padding: 15px;
-                margin-top: 15%;
+                padding: 1rem;
+                margin: 15% auto 140px;
                 width: 95%;
             }
 
-            .copy_btn {
-                padding: 6px 10px;
+            input[type="date"],
+            input[type="time"] {
+                font-size: 0.9rem;
+            }
+
+            footer {
+                padding: 0.75rem;
                 font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 360px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .container {
+                margin: 20% auto 160px;
+            }
+        }
+
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
             }
         }
     </style>
 </head>
 
-<body>
-    <video class="video-background" autoplay muted loop>
+<body itemscope itemtype="http://schema.org/LocalBusiness">
+    <!-- Schema Markup -->
+    <meta itemprop="name" content="Macclesfield Taxis">
+    <meta itemprop="telephone" content="+447423587661">
+    <meta itemprop="email" content="macclesfieldtaxiservice@gmail.com">
+
+    <video class="video-background" autoplay muted loop playsinline>
         <source src="https://www.macclesfieldtaxis.com/videos/855540-hd_1920_1080_30fps.mp4" type="video/mp4">
-        Your browser does not support the video tag.
     </video>
-    
-    <div class="container">
-        <h1>Macclesfield Taxis</h1>
+
+    <main class="container" role="main">
+        <h1 itemprop="legalName">Macclesfield Taxis</h1>
+        
         <div class="heading-div">
-            <h2>Call for Instant Booking:</h2>
-            <h2 class="number-h2">0044 7423587661 
-                <button class="copy_btn" onclick="copyText()">Copy</button>
+            <h2>For Instance Booking<span itemprop="makesOffer"> Call now</span></h2>
+            <h2 class="number-h2" itemprop="telephone">
+                <a href="tel:+447423587661" style="color:inherit;text-decoration:none">0044 7423 587661</a>
+                <button class="copy_btn" onclick="copyText()" aria-label="Copy phone number">Copy</button>
             </h2>
-            <div class="heading">Reliable Taxi & Cab Service in Macclesfield </div>
+            <div class="heading" itemprop="slogan">Reliable Taxi & Cab Service in Macclesfield</div>
         </div>
 
         <form id="bookingForm" action="https://www.macclesfieldtaxis.com/" method="POST">
-        <form id="bookingForm" action="https://macclesfieldtaxiservice.onrender.com/" method="POST">
-            <input type="text" name="fullName" placeholder="Full Name" required>
-            <input type="email" name="email" placeholder="Valid Email" required>
-            <input type="number" name="passengers" placeholder="Number of Passengers" required>
-            <input type="text" name="from" placeholder="From" required>
-            <input type="text" name="destination" placeholder="Destination" required>
-            <input type="tel" name="phone" placeholder="Phone Number" required>
-            <input type="date" name="date" required>
-            <input type="time" name="time" required>
-            <button class="b1" type="submit">Book the Ride</button>
-            <button class="b2" type="reset">Reset</button>
+            <input type="text" name="fullName" placeholder="Full Name" required aria-label="Full Name">
+            <input type="email" name="email" placeholder="Valid Email" required aria-label="Email Address">
+            <input type="number" name="passengers" placeholder="Number of Passengers" required aria-label="Passenger Count" min="1">
+            <input type="text" name="from" placeholder="From" required aria-label="Pickup Location">
+            <input type="text" name="destination" placeholder="Destination" required aria-label="Destination">
+            <input type="tel" name="phone" placeholder="Phone Number" required aria-label="Phone Number">
+            <input type="date" name="date" required aria-label="Travel Date">
+            <input type="time" name="time" required aria-label="Travel Time">
+            
+            <div class="button-group">
+                <button class="b1" type="submit">Book the Ride</button>
+                <button class="b2" type="reset">Reset Form</button>
+            </div>
         </form>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div itemprop="address" itemscope itemtype="#">
+            <span itemprop="addressLocality" style="color: transparent;">Macclesfield</span>
+            <span itemprop="streetAddress">Macclesfield Taxi Service</span>
+            <span itemprop="postalCode" style="color: transparent;">SK11 7JQ</span>
+        </div>
+    </footer>
+
+ 
+
+    <!-- Popups -->
+    <div id="errorPopup" class="error-popup" style="display: none; background-color: var(--error); color: white;">
+        <p>Please fill in all required fields!</p>
+        <button onclick="closeErrorPopup()" style="margin-top: 1rem;">OK</button>
     </div>
 
-    <!-- Error Popup -->
-    <div id="errorPopup" class="error-popup">
-        <p>Please fill in all the required fields!</p>
-        <button onclick="closeErrorPopup()">OK</button>
-    </div>
-
-    <div id="copyPopup" class="copy-popup">
-        <p>Copied!</p>
+    <div id="copyPopup" class="copy-popup" style="display: none; background-color: var(--primary); color: #000;">
+        <p>Phone number copied!</p>
     </div>
 
     <script>
-        // Function to copy text
+        // Enhanced Copy Function
         function copyText() {
             const text = "0044 7423587661";
-            navigator.clipboard.writeText(text).then(function () {
+            navigator.clipboard.writeText(text).then(() => {
                 showCopyPopup();
-            }, function (err) {
-                console.error("Failed to copy text: ", err);
-            });
+                setTimeout(() => {
+                    document.getElementById('copyPopup').style.display = 'none';
+                }, 1500);
+            }).catch(err => console.error('Copy failed:', err));
         }
 
-        function showCopyPopup() {
-            const copyPopup = document.getElementById('copyPopup');
-            copyPopup.style.display = 'block';
-            setTimeout(() => {
-                copyPopup.style.display = 'none';
-            }, 1000); 
-        }
-
-        // Form validation
-        document.getElementById('bookingForm').addEventListener('submit', function (event) {
-            const inputs = this.querySelectorAll('input[required]');
+        // Form Validation
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            const inputs = Array.from(this.elements).filter(el => el.required);
             let isValid = true;
 
             inputs.forEach(input => {
                 if (!input.value.trim()) {
                     isValid = false;
-                    input.style.borderColor = '#ff4444'; 
+                    input.style.borderColor = 'var(--error)';
                 } else {
-                    input.style.borderColor = '#00ffcc'; 
+                    input.style.borderColor = 'var(--primary)';
                 }
             });
 
             if (!isValid) {
-                event.preventDefault(); 
-                document.getElementById('errorPopup').style.display = 'block'; // Show error popup
+                e.preventDefault();
+                document.getElementById('errorPopup').style.display = 'block';
             }
         });
 
-        // Close error popup
+        // Popup Controls
+        function showCopyPopup() {
+            document.getElementById('copyPopup').style.display = 'block';
+        }
+
         function closeErrorPopup() {
             document.getElementById('errorPopup').style.display = 'none';
         }
+
+        // Viewport Height Fix for Mobile
+        function setVH() {
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        }
+        setVH();
+        window.addEventListener('resize', setVH);
     </script>
 </body>
-
 </html>
